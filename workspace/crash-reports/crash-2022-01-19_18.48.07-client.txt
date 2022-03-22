@@ -1,0 +1,90 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 1/19/22, 6:48 PM
+Description: Unexpected error
+
+java.util.ConcurrentModificationException
+	at com.google.common.collect.HashBiMap$Itr.checkForConcurrentModification(HashBiMap.java:339)
+	at com.google.common.collect.HashBiMap$Itr.hasNext(HashBiMap.java:345)
+	at net.minecraft.client.audio.SoundManager.updateAllSounds(SoundManager.java:251)
+	at net.minecraft.client.audio.SoundHandler.update(SoundHandler.java:233)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1878)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:999)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:444)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.collect.HashBiMap$Itr.checkForConcurrentModification(HashBiMap.java:339)
+	at com.google.common.collect.HashBiMap$Itr.hasNext(HashBiMap.java:345)
+	at net.minecraft.client.audio.SoundManager.updateAllSounds(SoundManager.java:251)
+	at net.minecraft.client.audio.SoundHandler.update(SoundHandler.java:233)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 7 total; [EntityPlayerSP['V65LkDOUkqTuwC'/97008, l='MpServer', x=-4.06, y=93.02, z=9.22], EntityOtherPlayerMP['sjhsdaewhg'/1959, l='MpServer', x=-19.58, y=91.16, z=-9.44], EntityOtherPlayerMP['cdafwrt3_sv'/1812, l='MpServer', x=-12.63, y=-52.20, z=45.53], EntityOtherPlayerMP['SujiroKiFujaffff'/1976, l='MpServer', x=10.53, y=95.00, z=56.78], EntityOtherPlayerMP['Test941'/1637, l='MpServer', x=-5.25, y=91.29, z=6.54], EntityOtherPlayerMP['PigNotFound'/1910, l='MpServer', x=36.50, y=94.04, z=-24.95], EntityOtherPlayerMP['moha25'/1596, l='MpServer', x=32.87, y=94.00, z=-44.06]]
+	Chunk stats: MultiplayerChunkCache: 437, 437
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 0.00,118.00,0.00 - World: (0,118,0), Chunk: (at 0,7,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1199 game time, 13000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: adventure (ID 2). Hardcore: false. Cheats: false
+	Forced entities: 25 total; [EntityItem['item.item.bucketLava'/3088, l='MpServer', x=21.63, y=95.00, z=15.06], EntityOtherPlayerMP['cdafwrt3_sv'/1812, l='MpServer', x=-12.63, y=-52.20, z=45.53], EntityOtherPlayerMP['XiTR3wci'/2025, l='MpServer', x=-1.81, y=92.36, z=7.55], EntityOtherPlayerMP['moha25'/1596, l='MpServer', x=31.97, y=90.00, z=-49.81], EntityOtherPlayerMP['moha25'/1596, l='MpServer', x=32.87, y=94.00, z=-44.06], EntityPlayerSP['V65LkDOUkqTuwC'/97008, l='MpServer', x=-4.06, y=93.02, z=9.22], EntityOtherPlayerMP['PigNotFound'/1910, l='MpServer', x=3.59, y=200.00, z=4.22], EntityOtherPlayerMP['sjhsdaewhg'/1959, l='MpServer', x=-19.58, y=91.16, z=-9.44], EntityOtherPlayerMP['yoyo_felo'/1836, l='MpServer', x=-51.72, y=96.71, z=-34.31], EntityOtherPlayerMP['Test941'/1637, l='MpServer', x=2.44, y=200.00, z=8.00], EntityOtherPlayerMP['moha25'/1596, l='MpServer', x=32.28, y=103.00, z=-44.72], EntityOtherPlayerMP['cdafwrt3_sv'/1812, l='MpServer', x=-12.63, y=-52.20, z=45.53], EntityOtherPlayerMP['SujiroKiFujaffff'/1976, l='MpServer', x=10.53, y=95.00, z=56.78], EntityOtherPlayerMP['XiTR3wci'/2025, l='MpServer', x=2.34, y=200.00, z=-6.19], EntityOtherPlayerMP['juandiegopingon'/2050, l='MpServer', x=0.22, y=200.00, z=-8.31], EntityOtherPlayerMP['reece121212'/2051, l='MpServer', x=-10.97, y=91.00, z=44.94], EntityOtherPlayerMP['_techno_the_pig_'/2056, l='MpServer', x=-48.31, y=96.91, z=9.66], EntityOtherPlayerMP['moha25'/1596, l='MpServer', x=30.63, y=96.16, z=-47.84], EntityOtherPlayerMP['Test941'/1637, l='MpServer', x=-5.25, y=91.29, z=6.54], EntityOtherPlayerMP['PigNotFound'/1910, l='MpServer', x=36.50, y=94.04, z=-24.95], EntityOtherPlayerMP['Test941'/1637, l='MpServer', x=-5.25, y=91.29, z=6.54], EntityOtherPlayerMP['sjhsdaewhg'/1959, l='MpServer', x=-19.58, y=91.16, z=-9.44], EntityOtherPlayerMP['moha25'/1596, l='MpServer', x=32.87, y=94.00, z=-44.06], EntityOtherPlayerMP['SujiroKiFujaffff'/1976, l='MpServer', x=10.53, y=95.00, z=56.78], EntityOtherPlayerMP['PigNotFound'/1910, l='MpServer', x=36.50, y=94.04, z=-24.95]]
+	Retry entities: 0 total; []
+	Server brand: PaperSpigot
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:394)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2318)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:463)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 12x AMD Ryzen 5 4600H with Radeon Graphics 
+	Java Version: 11.0.13, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 411643872 bytes (392 MB) / 1441792000 bytes (1375 MB) up to 1979711488 bytes (1888 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 3, tcache: 57, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Graphics GL version 4.6.13596 Compatibility Profile Context 20.10.22.03 27.20.1022.3003, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: !   Verble PvP.zip
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 4600H with Radeon Graphics 
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.13596 Compatibility Profile Context 20.10.22.03 27.20.1022.3003
+	OpenGlRenderer: AMD Radeon(TM) Graphics
+	OpenGlVendor: ATI Technologies Inc.
+	CpuCount: 12

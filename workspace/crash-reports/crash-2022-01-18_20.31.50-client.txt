@@ -1,0 +1,104 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 1/18/22, 8:31 PM
+Description: Updating screen events
+
+java.lang.NullPointerException: Updating screen events
+	at me.kansio.client.modules.impl.visuals.HUD.onDisable(HUD.java:109)
+	at me.kansio.client.modules.impl.Module.toggle(Module.java:80)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameModule.mouseClicked(FrameModule.java:157)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameCategory.mouseClicked(FrameCategory.java:118)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.lambda$mouseClicked$2(ClickGUI.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.mouseClicked(ClickGUI.java:63)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:586)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:555)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1548)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:999)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:444)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at me.kansio.client.modules.impl.visuals.HUD.onDisable(HUD.java:109)
+	at me.kansio.client.modules.impl.Module.toggle(Module.java:80)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameModule.mouseClicked(FrameModule.java:157)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameCategory.mouseClicked(FrameCategory.java:118)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.lambda$mouseClicked$2(ClickGUI.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.mouseClicked(ClickGUI.java:63)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:586)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:555)
+
+-- Affected screen --
+Details:
+	Screen name: me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 20 total; [EntityPlayerSP['Biveub77'/18226, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['k_r_o_n_o_s'/69967, l='MpServer', x=-4.75, y=95.00, z=-13.97], EntityOtherPlayerMP['netomdm7'/70083, l='MpServer', x=-14.69, y=94.00, z=3.84], EntityOtherPlayerMP['HediosMT'/70204, l='MpServer', x=-5.25, y=96.19, z=8.84], EntityOtherPlayerMP['Seadog98'/70210, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['z_M3stre_DK_z'/70225, l='MpServer', x=-5.97, y=94.00, z=-6.38], EntityOtherPlayerMP['Allanfm7'/70228, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['iM0nk_y'/70232, l='MpServer', x=-3.53, y=94.00, z=-9.56], EntityOtherPlayerMP['AeroBOY_'/70243, l='MpServer', x=-16.40, y=95.89, z=8.70], EntityOtherPlayerMP['starkauan'/70247, l='MpServer', x=-3.06, y=94.00, z=-1.00], EntityOtherPlayerMP['jotaX7prkrl'/70250, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['__KiraQuen'/70272, l='MpServer', x=-6.22, y=94.00, z=12.53], EntityOtherPlayerMP['Dark35w'/70273, l='MpServer', x=-5.81, y=94.00, z=13.38], EntityOtherPlayerMP['§8[NPC] 33ee4dd4'/1, l='MpServer', x=-8.50, y=94.50, z=14.50], EntityOtherPlayerMP['§8[NPC] a9f0c719'/9, l='MpServer', x=-4.50, y=94.50, z=14.50], EntityOtherPlayerMP['§8[NPC] 0838c2ba'/17, l='MpServer', x=-24.50, y=94.00, z=4.50], EntityOtherPlayerMP['breninm'/69371, l='MpServer', x=0.66, y=104.19, z=5.66], EntityOtherPlayerMP['MiopeSouPug'/70091, l='MpServer', x=-15.91, y=95.00, z=21.94], EntityOtherPlayerMP['mape__'/70235, l='MpServer', x=2.57, y=92.25, z=29.69], EntityOtherPlayerMP['Mansho'/70277, l='MpServer', x=-6.50, y=94.00, z=10.66]]
+	Chunk stats: MultiplayerChunkCache: 49, 49
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 0.00,100.00,0.00 - World: (0,100,0), Chunk: (at 0,6,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1299487 game time, 13001 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: adventure (ID 2). Hardcore: false. Cheats: false
+	Forced entities: 77 total; [EntityOtherPlayerMP['Dark35w'/70273, l='MpServer', x=-5.81, y=94.00, z=13.38], EntityOtherPlayerMP['__KiraQuen'/70272, l='MpServer', x=-6.22, y=94.00, z=12.53], EntityOtherPlayerMP['§8[NPC] 33ee4dd4'/1, l='MpServer', x=-8.50, y=94.50, z=14.50], EntityArmorStand['§e9.§r §f§7fajoszz§7 [ORG]§r §7- §e944§r'/129, l='MpServer', x=10.50, y=94.19, z=7.50], EntityBat['Bat'/2, l='MpServer', x=-8.50, y=95.85, z=14.50], EntityArmorStand['§e56 jogando agora'/3, l='MpServer', x=-8.50, y=94.38, z=14.50], EntityOtherPlayerMP['§8[NPC] 0838c2ba'/17, l='MpServer', x=-24.50, y=94.00, z=4.50], EntityOtherPlayerMP['Mansho'/70277, l='MpServer', x=-6.50, y=94.00, z=10.66], EntityWither['§dAdquira ranks e mais! §c>§e>§a> §b§lMUSH.COM.BR/LOJA'/70276, l='MpServer', x=-8.28, y=96.50, z=18.41], EntityArmorStand['§bDuplas'/6, l='MpServer', x=-8.50, y=94.66, z=14.50], EntityArmorStand['§e10.§r §f§7yPiolho§7 [SAVAGE]§r §7- §e943§r'/134, l='MpServer', x=10.50, y=93.88, z=7.50], EntityOtherPlayerMP['§8[NPC] a9f0c719'/9, l='MpServer', x=-4.50, y=94.50, z=14.50], EntityBat['Bat'/10, l='MpServer', x=-4.50, y=95.85, z=14.50], EntityArmorStand['§e130 jogando agora'/11, l='MpServer', x=-4.50, y=94.38, z=14.50], EntityArmorStand['§6§lClique para alternar!'/139, l='MpServer', x=10.50, y=93.50, z=7.50], EntityArmorStand['§bSolo'/14, l='MpServer', x=-4.50, y=94.66, z=14.50], EntityArmorStand['§a§lSemanal§r §7Mensal§r §7Total'/142, l='MpServer', x=10.50, y=93.16, z=7.50], EntityOtherPlayerMP['§8[NPC] 0838c2ba'/17, l='MpServer', x=-24.50, y=94.00, z=4.50], EntityBat['Bat'/18, l='MpServer', x=-24.50, y=95.35, z=4.50], EntityArmorStand['§7Kits & Melhorias'/19, l='MpServer', x=-24.50, y=93.88, z=4.50], EntityArmorStand['§b§lLOJA'/22, l='MpServer', x=-24.50, y=94.16, z=4.50], EntityArmorStand['§b§lTOP 100§r §e§lWINS§r §7(1/10)'/25, l='MpServer', x=10.50, y=96.75, z=1.50], EntityArmorStand['§d§lPOÇO DAS ALMAS'/155, l='MpServer', x=5.50, y=93.88, z=-5.50], EntityArmorStand['§e1.§r §f§7Prateado§7 [HACKING]§r §7- §e534§r'/28, l='MpServer', x=10.50, y=96.47, z=1.50], EntityArmorStand['§e2.§r §f§7phiszz§7 [ORG]§r §7- §e291§r'/31, l='MpServer', x=10.50, y=96.16, z=1.50], EntityArmorStand['§e3.§r §f§5cabralxz§7 [HACKING]§r §7- §e251§r'/34, l='MpServer', x=10.50, y=95.88, z=1.50], EntityOtherPlayerMP['breninm'/69371, l='MpServer', x=0.66, y=104.19, z=5.66], EntityOtherPlayerMP['MiopeSouPug'/70091, l='MpServer', x=-15.91, y=95.00, z=21.94], EntityOtherPlayerMP['mape__'/70235, l='MpServer', x=2.57, y=92.25, z=29.69], EntityOtherPlayerMP['marcolaszRajada'/70266, l='MpServer', x=-6.02, y=93.35, z=33.47], EntityArmorStand['§e4.§r §f§7fajoszz§7 [ORG]§r §7- §e244§r'/39, l='MpServer', x=10.50, y=95.59, z=1.50], EntityArmorStand['§e5.§r §f§dpadilhasz§7 [HACKING]§r §7- §e225§r'/44, l='MpServer', x=10.50, y=95.31, z=1.50], EntityArmorStand['§e6.§r §f§7akunaszz§r §7- §e197§r'/49, l='MpServer', x=10.50, y=95.03, z=1.50], EntityArmorStand['§e7.§r §f§7osinistro§7 [HACKING]§r §7- §e187§r'/54, l='MpServer', x=10.50, y=94.75, z=1.50], EntityArmorStand['§e8.§r §f§5goshasz§7 [HACKING]§r §7- §e177§r'/59, l='MpServer', x=10.50, y=94.47, z=1.50], EntityOtherPlayerMP['HediosMT'/70204, l='MpServer', x=-5.25, y=96.19, z=8.84], EntityArmorStand['§e9.§r §f§dReforcoDoVasco§7 [SAVAGE]§r §7- §e167§r'/64, l='MpServer', x=10.50, y=94.19, z=1.50], EntityOtherPlayerMP['netomdm7'/70083, l='MpServer', x=-14.69, y=94.00, z=3.84], EntityOtherPlayerMP['Seadog98'/70210, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityArmorStand['§e10.§r §f§dHeroSturn§7 [IMORTAL]§r §7- §e166§r'/69, l='MpServer', x=10.50, y=93.88, z=1.50], EntityOtherPlayerMP['Mansho'/70277, l='MpServer', x=-6.50, y=94.00, z=10.66], EntityArmorStand['§6§lClique para alternar!'/74, l='MpServer', x=10.50, y=93.50, z=1.50], EntityOtherPlayerMP['MiopeSouPug'/70091, l='MpServer', x=-15.91, y=95.00, z=21.94], EntityArmorStand['§a§lSemanal§r §7Mensal§r §7Total'/77, l='MpServer', x=10.50, y=93.16, z=1.50], EntityOtherPlayerMP['k_r_o_n_o_s'/69967, l='MpServer', x=-4.75, y=95.00, z=-13.97], EntityOtherPlayerMP['z_M3stre_DK_z'/70225, l='MpServer', x=-5.97, y=94.00, z=-6.38], EntityOtherPlayerMP['Allanfm7'/70228, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['iM0nk_y'/70232, l='MpServer', x=-3.53, y=94.00, z=-9.56], EntityArmorStand['§b§lTOP 100§r §e§lKILLS§r §7(1/10)'/90, l='MpServer', x=10.50, y=96.75, z=7.50], EntityOtherPlayerMP['mape__'/70235, l='MpServer', x=2.57, y=92.25, z=29.69], EntityArmorStand['§e1.§r §f§7Prateado§7 [HACKING]§r §7- §e3.838§r'/93, l='MpServer', x=10.50, y=96.47, z=7.50], EntityArmorStand['§e2.§r §f§5cabralxz§7 [HACKING]§r §7- §e1.780§r'/96, l='MpServer', x=10.50, y=96.16, z=7.50], EntityOtherPlayerMP['AeroBOY_'/70243, l='MpServer', x=-16.40, y=95.89, z=8.70], EntityArmorStand['§e3.§r §f§dpadilhasz§7 [HACKING]§r §7- §e1.615§r'/99, l='MpServer', x=10.50, y=95.88, z=7.50], EntityOtherPlayerMP['starkauan'/70247, l='MpServer', x=-3.06, y=94.00, z=-1.00], EntityArmorStand['§e4.§r §f§7phiszz§7 [ORG]§r §7- §e1.254§r'/104, l='MpServer', x=10.50, y=95.59, z=7.50], EntityOtherPlayerMP['jotaX7prkrl'/70250, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityArmorStand['§e5.§r §f§5goshasz§7 [HACKING]§r §7- §e1.249§r'/109, l='MpServer', x=10.50, y=95.31, z=7.50], EntityPlayerSP['Biveub77'/18226, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['k_r_o_n_o_s'/69967, l='MpServer', x=-4.75, y=95.00, z=-13.97], EntityOtherPlayerMP['netomdm7'/70083, l='MpServer', x=-14.69, y=94.00, z=3.84], EntityOtherPlayerMP['HediosMT'/70204, l='MpServer', x=-5.25, y=96.19, z=8.84], EntityOtherPlayerMP['Seadog98'/70210, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityArmorStand['§e6.§r §f§dReforcoDoVasco§7 [SAVAGE]§r §7- §e1.215§r'/114, l='MpServer', x=10.50, y=95.03, z=7.50], EntityOtherPlayerMP['z_M3stre_DK_z'/70225, l='MpServer', x=-5.97, y=94.00, z=-6.38], EntityOtherPlayerMP['Allanfm7'/70228, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['iM0nk_y'/70232, l='MpServer', x=-3.53, y=94.00, z=-9.56], EntityOtherPlayerMP['AeroBOY_'/70243, l='MpServer', x=-16.40, y=95.89, z=8.70], EntityOtherPlayerMP['starkauan'/70247, l='MpServer', x=-3.06, y=94.00, z=-1.00], EntityArmorStand['§e7.§r §f§dRonaldoReverse2§r §7- §e1.114§r'/119, l='MpServer', x=10.50, y=94.75, z=7.50], EntityOtherPlayerMP['jotaX7prkrl'/70250, l='MpServer', x=-6.50, y=95.00, z=-13.50], EntityOtherPlayerMP['__KiraQuen'/70272, l='MpServer', x=-6.22, y=94.00, z=12.53], EntityOtherPlayerMP['Dark35w'/70273, l='MpServer', x=-5.81, y=94.00, z=13.38], EntityOtherPlayerMP['breninm'/69371, l='MpServer', x=0.66, y=104.19, z=5.66], EntityOtherPlayerMP['§8[NPC] 33ee4dd4'/1, l='MpServer', x=-8.50, y=94.50, z=14.50], EntityArmorStand['§e8.§r §f§dHeroSturn§7 [IMORTAL]§r §7- §e1.007§r'/124, l='MpServer', x=10.50, y=94.47, z=7.50], EntityOtherPlayerMP['§8[NPC] a9f0c719'/9, l='MpServer', x=-4.50, y=94.50, z=14.50]]
+	Retry entities: 0 total; []
+	Server brand: Zartema <- Gartema
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:394)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2318)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:457)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 12x AMD Ryzen 5 4600H with Radeon Graphics 
+	Java Version: 11.0.13, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 196404320 bytes (187 MB) / 531628032 bytes (507 MB) up to 1979711488 bytes (1888 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Graphics GL version 4.6.13596 Compatibility Profile Context 20.10.22.03 27.20.1022.3003, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 4600H with Radeon Graphics 
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.13596 Compatibility Profile Context 20.10.22.03 27.20.1022.3003
+	OpenGlRenderer: AMD Radeon(TM) Graphics
+	OpenGlVendor: ATI Technologies Inc.
+	CpuCount: 12

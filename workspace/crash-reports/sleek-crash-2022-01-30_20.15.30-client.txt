@@ -1,0 +1,104 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 1/30/22 8:15 PM
+Description: Updating screen events
+
+java.lang.NullPointerException: Updating screen events
+	at me.kansio.client.modules.impl.movement.Flight.onEnable(Flight.java:68)
+	at me.kansio.client.modules.impl.Module.toggle(Module.java:74)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameModule.mouseClicked(FrameModule.java:157)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameCategory.mouseClicked(FrameCategory.java:118)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.lambda$mouseClicked$2(ClickGUI.java:63)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.mouseClicked(ClickGUI.java:63)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:586)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:555)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1558)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1009)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:442)
+	at net.minecraft.client.main.Main.main(Main.java:121)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at me.kansio.client.modules.impl.movement.Flight.onEnable(Flight.java:68)
+	at me.kansio.client.modules.impl.Module.toggle(Module.java:74)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameModule.mouseClicked(FrameModule.java:157)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.components.FrameCategory.mouseClicked(FrameCategory.java:118)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.lambda$mouseClicked$2(ClickGUI.java:63)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI.mouseClicked(ClickGUI.java:63)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:586)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:555)
+
+-- Affected screen --
+Details:
+	Screen name: me.kansio.client.gui.clickgui.ui.clickgui.frame.ClickGUI
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 6 total; [EntityPlayerSP['QKlrstsRyCLlX4'/359625, l='MpServer', x=52.19, y=57.00, z=95.25], EntityOtherPlayerMP['Cgrlqs'/17801583, l='MpServer', x=53.35, y=97.10, z=111.96], EntityOtherPlayerMP['G4LL3'/18144490, l='MpServer', x=66.74, y=58.48, z=96.94], EntityOtherPlayerMP['sens_tx'/18150499, l='MpServer', x=55.79, y=57.00, z=95.74], EntityOtherPlayerMP['TeParto100k'/17902903, l='MpServer', x=45.96, y=57.00, z=99.85], EntityOtherPlayerMP['FthTequila'/18083792, l='MpServer', x=25.75, y=68.00, z=104.72]]
+	Chunk stats: MultiplayerChunkCache: 81, 81
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 0.00,66.00,1.00 - World: (0,66,1), Chunk: (at 0,4,1 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 38834737 game time, 13001 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 76 total; [EntityOtherPlayerMP['Sarely'/18138959, l='MpServer', x=2.91, y=68.00, z=45.72], EntityOtherPlayerMP['RhazimGaming'/18101518, l='MpServer', x=-1.63, y=68.00, z=44.50], EntityOtherPlayerMP['TeParto100k'/17902903, l='MpServer', x=45.96, y=57.00, z=99.85], EntityOtherPlayerMP['§f'/1074, l='MpServer', x=9.50, y=69.00, z=17.50], EntityOtherPlayerMP['GABRIELINH0'/18109083, l='MpServer', x=0.88, y=66.50, z=-6.00], EntityOtherPlayerMP['Ricardo243596'/18145283, l='MpServer', x=0.44, y=66.00, z=-0.09], EntityOtherPlayerMP['HITBLOCKED'/17633051, l='MpServer', x=0.56, y=67.06, z=12.78], EntityOtherPlayerMP['iTzNectarius'/17874332, l='MpServer', x=0.50, y=66.50, z=10.22], EntityOtherPlayerMP['§f'/1076, l='MpServer', x=14.50, y=69.00, z=14.50], EntityOtherPlayerMP['§f'/1085, l='MpServer', x=-8.50, y=69.00, z=17.50], EntityOtherPlayerMP['Sarely'/18138959, l='MpServer', x=3.34, y=68.00, z=26.38], EntityOtherPlayerMP['§f'/1068, l='MpServer', x=-13.50, y=69.00, z=14.50], EntityOtherPlayerMP['3X9L'/18074152, l='MpServer', x=9.50, y=67.50, z=10.84], EntityOtherPlayerMP['MEZAF'/18136329, l='MpServer', x=-25.12, y=68.00, z=44.00], EntityOtherPlayerMP['Facuprocrak'/18087792, l='MpServer', x=1.72, y=68.00, z=25.03], EntityOtherPlayerMP['§f'/1070, l='MpServer', x=-15.50, y=69.00, z=9.50], EntityOtherPlayerMP['§7'/1078, l='MpServer', x=16.50, y=69.00, z=9.50], EntityOtherPlayerMP['hacher101'/18098657, l='MpServer', x=-2.28, y=68.00, z=31.03], EntityOtherPlayerMP['Choclo69'/18123812, l='MpServer', x=13.06, y=68.00, z=25.78], EntityOtherPlayerMP['douxfamily'/18103003, l='MpServer', x=0.50, y=66.00, z=1.50], EntityOtherPlayerMP['Skyline_Best'/18135057, l='MpServer', x=8.88, y=68.00, z=37.75], EntityOtherPlayerMP['gamerman89687'/18149227, l='MpServer', x=-2.28, y=68.00, z=33.72], EntityOtherPlayerMP['uLit'/18149986, l='MpServer', x=-19.13, y=68.00, z=28.09], EntityOtherPlayerMP['JoxyBanana'/17889749, l='MpServer', x=16.76, y=70.00, z=40.04], EntityOtherPlayerMP['Matilex1'/17982075, l='MpServer', x=9.91, y=68.00, z=42.31], EntityOtherPlayerMP['MalAmada'/18090265, l='MpServer', x=16.31, y=70.00, z=40.88], EntityOtherPlayerMP['Skyline_Best'/18135057, l='MpServer', x=28.53, y=68.48, z=109.72], EntityOtherPlayerMP['Vicentw'/18148882, l='MpServer', x=8.66, y=68.00, z=36.13], EntityOtherPlayerMP['sens_tx'/18150499, l='MpServer', x=30.95, y=68.00, z=112.11], EntityOtherPlayerMP['Pandita_125'/18110423, l='MpServer', x=12.66, y=68.00, z=45.31], EntityOtherPlayerMP['deDani'/17764003, l='MpServer', x=5.16, y=68.00, z=45.97], EntityOtherPlayerMP['G4LL3'/18144490, l='MpServer', x=23.51, y=68.00, z=77.41], EntityOtherPlayerMP['pzyclone'/14905927, l='MpServer', x=2.16, y=68.00, z=48.06], EntityOtherPlayerMP['LockGriin'/18149277, l='MpServer', x=-31.88, y=68.00, z=47.53], EntityOtherPlayerMP['Gelurino'/18146417, l='MpServer', x=-9.22, y=68.00, z=25.56], EntityOtherPlayerMP['Ily_Rayser'/18149949, l='MpServer', x=0.22, y=68.00, z=45.13], EntityOtherPlayerMP['zJxns'/18151245, l='MpServer', x=-12.16, y=69.00, z=26.66], EntityOtherPlayerMP['TeParto100k'/17902903, l='MpServer', x=29.37, y=68.00, z=114.90], EntityOtherPlayerMP['Cgrlqs'/17801583, l='MpServer', x=53.35, y=97.10, z=111.96], EntityItem['item.item.enderPearl'/18150516, l='MpServer', x=54.22, y=68.01, z=79.91], EntityItem['item.item.potion'/18150517, l='MpServer', x=54.50, y=68.01, z=79.84], EntityItem['item.item.potion'/18150518, l='MpServer', x=52.88, y=68.09, z=79.38], EntityItem['item.item.swordDiamond'/18150515, l='MpServer', x=54.22, y=68.00, z=80.41], EntityItem['item.item.potion'/18150525, l='MpServer', x=52.84, y=68.00, z=79.72], EntityItem['item.item.potion'/18150527, l='MpServer', x=54.56, y=68.01, z=79.25], EntityItem['item.item.potion'/18150520, l='MpServer', x=55.22, y=68.00, z=80.44], EntityItem['item.item.potion'/18150521, l='MpServer', x=53.03, y=68.00, z=80.84], EntityOtherPlayerMP['RhazimGaming'/18101518, l='MpServer', x=0.47, y=68.00, z=46.75], EntityOtherPlayerMP['Cgrlqs'/17801583, l='MpServer', x=53.35, y=97.10, z=111.96], EntityOtherPlayerMP['sens_tx'/18150499, l='MpServer', x=55.79, y=57.00, z=95.74], EntityItem['item.item.potion'/18150549, l='MpServer', x=53.69, y=68.13, z=79.25], EntityItem['item.item.potion'/18150545, l='MpServer', x=52.66, y=68.00, z=80.03], EntityItem['item.item.potion'/18150546, l='MpServer', x=53.69, y=68.01, z=79.88], EntityItem['item.item.potion'/18150547, l='MpServer', x=53.38, y=68.00, z=80.13], EntityItem['item.item.helmetDiamond'/18150553, l='MpServer', x=53.31, y=68.00, z=80.50], EntityItem['item.item.potion'/18150532, l='MpServer', x=54.69, y=68.00, z=80.59], EntityItem['item.item.potion'/18150534, l='MpServer', x=54.31, y=68.00, z=80.19], EntityItem['item.item.potion'/18150528, l='MpServer', x=53.47, y=68.00, z=80.84], EntityItem['item.item.potion'/18150529, l='MpServer', x=55.06, y=68.00, z=80.94], EntityItem['item.item.potion'/18150531, l='MpServer', x=53.75, y=68.00, z=80.38], EntityItem['item.item.potion'/18150540, l='MpServer', x=54.41, y=68.00, z=80.63], EntityItem['item.item.potion'/18150536, l='MpServer', x=54.06, y=68.00, z=80.28], EntityItem['item.item.potion'/18150538, l='MpServer', x=53.97, y=68.09, z=80.03], EntityOtherPlayerMP['G4LL3'/18144490, l='MpServer', x=66.74, y=58.48, z=96.94], EntityOtherPlayerMP['FthTequila'/18083792, l='MpServer', x=29.90, y=68.00, z=113.98], EntityPlayerSP['QKlrstsRyCLlX4'/359625, l='MpServer', x=52.19, y=57.00, z=95.25], EntityOtherPlayerMP['vuhh'/18028564, l='MpServer', x=92.75, y=68.59, z=127.28], EntityOtherPlayerMP['Maene'/18046688, l='MpServer', x=94.77, y=68.70, z=127.35], EntityOtherPlayerMP['FthTequila'/18083792, l='MpServer', x=25.75, y=68.00, z=104.72], EntityOtherPlayerMP['Vicentw'/18148882, l='MpServer', x=8.66, y=68.00, z=36.13], EntityOtherPlayerMP['sens_tx'/18150499, l='MpServer', x=55.79, y=57.00, z=95.74], EntityOtherPlayerMP['gamerman89687'/18149227, l='MpServer', x=-2.28, y=68.00, z=33.72], EntityOtherPlayerMP['TeParto100k'/17902903, l='MpServer', x=45.96, y=57.00, z=99.85], EntityOtherPlayerMP['hacher101'/18098657, l='MpServer', x=-2.59, y=68.00, z=32.97], EntityOtherPlayerMP['FthTequila'/18083792, l='MpServer', x=25.75, y=68.00, z=104.72], EntityOtherPlayerMP['G4LL3'/18144490, l='MpServer', x=66.74, y=58.48, z=96.94]]
+	Retry entities: 0 total; []
+	Server brand: exaCord (git:BungeeCord-Bootstrap:1.16-R0.4-SNAPSHOT:ff550bb:unknown) <-
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:394)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2321)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:455)
+	at net.minecraft.client.main.Main.main(Main.java:121)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	CPU: 12x AMD Ryzen 5 4600H with Radeon Graphics 
+	Java Version: 1.8.0_322, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 188631568 bytes (179 MB) / 735576064 bytes (701 MB) up to 1760034816 bytes (1678 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 99
+	Launched Version: 1.8
+	LWJGL: 2.9.4
+	OpenGL: AMD Radeon(TM) Graphics GL version 4.6.13596 Compatibility Profile Context 20.10.22.03 27.20.1022.3003, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: !   Verble PvP.zip
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 4600H with Radeon Graphics 
+	OptiFine Version: OptiFine_1.8.8_HD_U_H8
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.13596 Compatibility Profile Context 20.10.22.03 27.20.1022.3003
+	OpenGlRenderer: AMD Radeon(TM) Graphics
+	OpenGlVendor: ATI Technologies Inc.
+	CpuCount: 12
